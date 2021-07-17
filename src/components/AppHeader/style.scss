@@ -24,4 +24,36 @@
     ::placeholder {
         color: color(mainColor);
     }
+
+    .nav-user {
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+        &.light {
+            &:hover {
+                border-bottom-color: white!important;
+            }
+            &.active {
+                border-bottom-color: white!important;
+            }
+        }
+        &.dark {
+            &:hover {
+                border-bottom-color: color(mainColor)!important;
+            }
+            &.active {
+                border-bottom-color: color(mainColor)!important;
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: robotic-bold;
+    font-weight: bold;
+    src: url(../../assets/font/SFTransRobotics-Oblique.ttf);
+}
+
+.robot-text {
+    font-family: robotic-bold;
 }

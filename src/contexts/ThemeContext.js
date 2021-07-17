@@ -51,8 +51,9 @@ export const ThemeProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        // console.log(containers, theme)
-        // addClassInAll(containers, 'light');
+        const theme = localStorage.getItem('theme');
+        const savedTheme = Boolean(theme) ? theme : 'light';
+        setTheme(savedTheme);
     }, [])
 
     return (

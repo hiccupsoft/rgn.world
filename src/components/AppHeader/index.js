@@ -3,11 +3,14 @@ import { useState } from 'react';
 import { Button, Container, Form, FormControl, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Toggle from "react-toggle";
 import { ThemeContext } from '../../contexts/ThemeContext';
-import logo from '../../assets/images/My collection icon light blue.png'
+import logo from '../../assets/images/Ragnify.png'
 import userImg from '../../assets/images/user placeholder.png'
+import WalletdarkImg from '../../assets/images/Wallet icon white.png'
+import WalletwhiteImg from '../../assets/images/Wallet icon dark.png'
 import './style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom';
 
 export default function AppHeader() {
     const [isDark, setIsDark] = useState(true);
@@ -16,6 +19,9 @@ export default function AppHeader() {
         setIsDark(event.target.checked)
         changeThemeMode();
     }
+
+    const location = useLocation();
+    const curRoute = location.pathname;
 
     return (
         <ThemeContext.Consumer>
@@ -44,18 +50,18 @@ export default function AppHeader() {
                                 </Form>
                             </div>
                             <div>
-                                <Navbar.Brand href="#home" style={theme === 'light' ? { color: 'white' } : { color: '#01D2F0' }}>Market Place</Navbar.Brand>
-                                <Navbar.Brand href="#home" style={theme === 'light' ? { color: 'white' } : { color: '#01D2F0' }}>Stats</Navbar.Brand>
-                                <Navbar.Brand href="#home" style={theme === 'light' ? { color: 'white' } : { color: '#01D2F0' }}>Resources</Navbar.Brand>
+                                <Navbar.Brand href="#home" className="robot-text" style={theme === 'light' ? { color: 'white' } : { color: '#01D2F0' }}>Market Place</Navbar.Brand>
+                                <Navbar.Brand href="#home" className="robot-text" style={theme === 'light' ? { color: 'white' } : { color: '#01D2F0' }}>Stats</Navbar.Brand>
+                                <Navbar.Brand href="#home" className="robot-text" style={theme === 'light' ? { color: 'white' } : { color: '#01D2F0' }}>Resources</Navbar.Brand>
                             </div>
                             <div>
                                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                                 <Navbar.Collapse id="responsive-navbar-nav">
                                     <Nav>
-                                        <Nav.Link href="#deets"><Image src={userImg} style={{ width: 45, height: 45 }} /></Nav.Link>
-                                        <Nav.Link eventKey={2} href="/second">
+                                        <Nav.Link eventKey={2} href="/second" className={["nav-user", theme === 'light' ? 'light' : 'dark', curRoute === "/second" ? 'active' : '']}>
                                             <Image src={userImg} style={{ width: 45, height: 45 }} />
                                         </Nav.Link>
+                                        <Nav.Link href="#deets"><Image src={theme === 'light' ? WalletdarkImg : WalletwhiteImg} style={{ width: 45, height: 45 }} /></Nav.Link>
                                         <Nav.Link className="d-flex align-items-center">
                                             <Toggle
                                                 className="DarkToggle"

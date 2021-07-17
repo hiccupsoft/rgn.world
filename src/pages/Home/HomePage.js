@@ -12,14 +12,18 @@ import Offer from '../../assets/images/Offer.png'
 import Favourites from '../../assets/images/Favourites.png'
 import Hidden from '../../assets/images/Hidden.png'
 import Inquiry from '../../assets/images/Inquiry.png'
-import Inquiry1 from '../../assets/images/Offer.png'
-import iconImg from '../../assets/images/Payouts icon.png'
+import PriceImg from '../../assets/images/Price.png'
+import StatusImg from '../../assets/images/Status.png'
+import CollectionImg from '../../assets/images/Collection.png'
+import BlockImg from '../../assets/images/Block chain.png'
 import { Dropdown } from 'bootstrap';
 import { faCoffee, faDollarSign, faPaperclip, faSearch, faStar, faTh } from '@fortawesome/free-solid-svg-icons';
 import StyledCard from '../../components/StyledCard';
+import { useState } from 'react';
 
 
 export default function HomePage(props) {
+    // const [test, setTest] = useState('0x12341245235235634634')
 
     return (
         <ThemeContext.Consumer>
@@ -34,6 +38,7 @@ export default function HomePage(props) {
                             <div className="profile" style={theme === 'light' ? { color: '#000' } : { color: 'white' }}>
                                 <div className="name">User</div>
                                 <div className="address">0x12341245235235634634</div>
+                                {/* <div className="address" onClick={() => {setTest(Date.now().toString())}}>{test}</div> */}
                             </div>
                         </div>
                         <div className="main-content">
@@ -73,11 +78,11 @@ export default function HomePage(props) {
                                         <Accordion.Toggle as={Card.Header} eventKey="0">
                                             <div className="d-flex accordion-toggle">
                                                 <div className="d-flex align-items-center">
-                                                    {/* <Image src={iconImg} /> */}
-                                                    <div className="icon-wrap">
+                                                    <Image src={StatusImg} />
+                                                    {/* <div className="icon-wrap">
                                                         <FontAwesomeIcon icon={faStar} className="icon-img" />
                                                     </div>
-                                                    <span className="p-1">STATUS</span>
+                                                    <span className="p-1">STATUS</span> */}
                                                 </div>
                                                 <i className="fa fa-chevron-down"></i>
                                             </div>
@@ -90,11 +95,11 @@ export default function HomePage(props) {
                                         <Accordion.Toggle as={Card.Header} eventKey="1">
                                             <div className="d-flex accordion-toggle">
                                                 <div className="d-flex align-items-center">
-                                                    {/* <Image src={iconImg} /> */}
-                                                    <div className="icon-wrap">
+                                                    <Image src={PriceImg} />
+                                                    {/* <div className="icon-wrap">
                                                         <FontAwesomeIcon icon={faDollarSign} className="icon-img" />
                                                     </div>
-                                                    <span className="p-1">PRICE</span>
+                                                    <span className="p-1">PRICE</span> */}
                                                 </div>
                                                 <i className="fa fa-chevron-down"></i>
                                             </div>
@@ -107,11 +112,11 @@ export default function HomePage(props) {
                                         <Accordion.Toggle as={Card.Header} eventKey="2">
                                             <div className="d-flex accordion-toggle">
                                                 <div className="d-flex align-items-center">
-                                                    {/* <Image src={iconImg} /> */}
-                                                    <div className="icon-wrap">
+                                                    <Image src={CollectionImg} />
+                                                    {/* <div className="icon-wrap">
                                                         <FontAwesomeIcon icon={faTh} className="icon-img" />
                                                     </div>
-                                                    <span className="p-1">COLLECTION</span>
+                                                    <span className="p-1">COLLECTION</span> */}
                                                 </div>
                                                 <i className="fa fa-chevron-down"></i>
                                             </div>
@@ -124,11 +129,11 @@ export default function HomePage(props) {
                                         <Accordion.Toggle as={Card.Header} eventKey="3">
                                             <div className="d-flex accordion-toggle">
                                                 <div className="d-flex align-items-center">
-                                                    {/* <Image src={iconImg} /> */}
-                                                    <div className="icon-wrap">
+                                                    <Image src={BlockImg} />
+                                                    {/* <div className="icon-wrap">
                                                         <FontAwesomeIcon icon={faPaperclip} className="icon-img" />
                                                     </div>
-                                                    <span className="p-1">BLOCKCHAIN</span>
+                                                    <span className="p-1">BLOCKCHAIN</span> */}
                                                 </div>
                                                 <i className="fa fa-chevron-down"></i>
                                             </div>
@@ -158,7 +163,7 @@ export default function HomePage(props) {
                                         // custom
                                         // onChange={this.onChangeColor.bind(this)}
                                         >
-                                            <option value="red">Red</option>
+                                            <option value="red">Single item</option>
                                             <option value="blue">Blue</option>
                                             <option value="green">Green</option>
                                             <option value="black">Black</option>
@@ -171,7 +176,7 @@ export default function HomePage(props) {
                                         // custom
                                         // onChange={this.onChangeColor.bind(this)}
                                         >
-                                            <option value="red">Red</option>
+                                            <option value="red">Recently received</option>
                                             <option value="blue">Blue</option>
                                             <option value="green">Green</option>
                                             <option value="black">Black</option>

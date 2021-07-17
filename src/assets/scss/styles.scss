@@ -4,24 +4,6 @@
 @import "./colors";
 @import "./functions";
 
-$light: (
-    borderDark: color(tronDarkBlue),
-    borderLight: color(tronLightBlue),
-    textDark: color(black),
-    textLight: color(white),
-    backgroundDark: color(tronDarkBlue),
-    backgroundLight: color(tronLightBlue),
-);
-
-$dark: (
-    borderDark: color(tronLightBlue),
-    borderLight: color(tronDarkBlue),
-    textDark: color(white),
-    textLight: color(black),
-    backgroundDark: color(tronLightBlue),
-    backgroundLight: color(tronDarkBlue),
-);
-
 body.light {
     background-color: color(containerLight);
     color: color(textLight);
@@ -44,7 +26,7 @@ body.dark {
     background: color(navDark);
 }
 .navbar {
-    padding: 0!important;
+    padding: 0 !important;
 }
 
 .card.light {

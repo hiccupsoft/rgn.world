@@ -2,6 +2,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Card, Image } from 'react-bootstrap';
+import heart from '../../assets/images/Small heart.png'
 import './style.scss';
 
 export default function StyledCard(props) {
@@ -11,7 +12,8 @@ export default function StyledCard(props) {
             <div className="item-container">
                 <header className="d-flex justify-content-end">
                     <div className="d-flex align-items-center">
-                        <FontAwesomeIcon icon={faHeart} />
+                    <Image src={heart} />
+                        {/* <FontAwesomeIcon icon={faHeart} /> */}
                         <span>12</span>
                     </div>
                 </header>
