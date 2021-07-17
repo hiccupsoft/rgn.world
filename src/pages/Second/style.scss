@@ -1,0 +1,57 @@
+@import "../../assets/scss/colors.scss";
+@import "../../assets/scss/functions.scss";
+
+#second-page {
+    .left-side {
+        padding: 20px 10px;
+    }
+    .right-side {
+        border: 1px solid color(mainColor);
+        height: 90vh;
+        padding: 40px;
+    }
+    .top-area {
+        height: 30%;
+    }
+
+    .first-item-container {
+        height: 360px;
+        background-color: transparent;
+        border: 1px solid color(mainColor);
+        border-radius: 5px;
+        position: relative;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .img-container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 75px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .text-wrap {
+            padding: 20px;
+        }
+        .footer {
+            height: 50px;
+            width: 100%;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            background-color: color(mainColor);
+            border-color: color(mainColor);
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}

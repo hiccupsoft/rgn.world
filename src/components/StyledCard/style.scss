@@ -1,0 +1,32 @@
+@import '../../assets/scss/colors.scss';
+@import '../../assets/scss/functions.scss';
+
+#styled-card {
+    .item-container {
+        // border: 1px solid red;
+        height: 100%;
+        background-color: transparent;
+        border: 1px solid color(mainColor);
+        border-radius: 5px;
+        position: relative;
+        padding: 10px;
+
+        header {
+            color: color(mainColor);
+            padding-bottom: 10px;
+        }
+        img {
+            width: 100%;
+        }
+        .footer {
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            .right-wrap {
+                img {
+                    width: 10px;
+                }
+            }
+        }
+    }
+}

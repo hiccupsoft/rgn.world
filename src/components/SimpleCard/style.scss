@@ -1,0 +1,23 @@
+@import '../../assets/scss/colors.scss';
+@import '../../assets/scss/functions.scss';
+
+#simple-card {
+    .item-container {
+        height: 360px;
+        background-color: transparent;
+        border: 1px solid color(mainColor);
+        border-radius: 5px;
+        position: relative;
+        // padding: 10px;
+        
+        img {
+            width: 100%;
+            height: 300px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .footer {
+            height: 50px;
+        }
+    }
+}
